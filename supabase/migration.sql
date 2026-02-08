@@ -85,6 +85,18 @@ VALUES (
 
 INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, url, sort_order) VALUES
 (
+  'SPL Token Staking',
+  'spl-token-staking',
+  'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (CLAWG + WSOL), on-chain distribution.',
+  ARRAY['Rust', 'Anchor', 'Solana', 'TypeScript'],
+  'solana-program',
+  'active',
+  'Cbhx5F1fVJG83xkqse88rxatrj73UW9Lz9G7awBrW8WZ',
+  'solana',
+  NULL,
+  0
+),
+(
   'Mercenary Liquidity',
   'mercenary-liquidity',
   'On-chain LP bounty protocol. Projects escrow SOL to incentivize liquidity providers with time-locked claims and automatic fee collection.',
@@ -92,18 +104,6 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'defi',
   'active',
   '3hDJRcAJf5AHrRgkXhUUCcTYQVMkCubh9M6kTrsBZv55',
-  'solana',
-  NULL,
-  0
-),
-(
-  'CLAWG Fee Splitter',
-  'clawg-fee-splitter',
-  'Automatic fee distribution program. Splits incoming SOL 30/70 between treasury and staking reward pools.',
-  ARRAY['Rust', 'Anchor', 'Solana'],
-  'solana-program',
-  'shipped',
-  '5QMXwAqPLVMzMdDAyT9QXJV2GZwxFDcvbz8u8dAe4sFT',
   'solana',
   NULL,
   1

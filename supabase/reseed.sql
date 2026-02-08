@@ -2,7 +2,7 @@
 
 TRUNCATE profile, projects, contributions;
 
-INSERT INTO profile (handle, name, title, bio, website, solana_address, github_url, x_url, farcaster_url, bluesky_url, lens_url)
+INSERT INTO profile (handle, name, title, bio, website, solana_address, github_url, x_url, farcaster_url, bluesky_url, lens_url, reddit_url, paragraph_url)
 VALUES (
   'nullopcode',
   'nullopcode',
@@ -14,7 +14,9 @@ VALUES (
   'https://x.com/nullopcode',
   'https://warpcast.com/nullopcode',
   'https://bsky.app/profile/nullopcode.bsky.social',
-  'https://hey.xyz/u/nullopcode'
+  'https://hey.xyz/u/nullopcode',
+  'https://reddit.com/u/nullopcode',
+  'https://paragraph.com/@nullopcode'
 );
 
 INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, sort_order) VALUES

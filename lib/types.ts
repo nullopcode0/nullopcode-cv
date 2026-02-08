@@ -13,6 +13,8 @@ export interface Profile {
   farcaster_url?: string;
   bluesky_url?: string;
   lens_url?: string;
+  reddit_url?: string;
+  paragraph_url?: string;
   updated_at: string;
 }
 

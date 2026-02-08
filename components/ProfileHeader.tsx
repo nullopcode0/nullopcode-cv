@@ -14,6 +14,8 @@ export function ProfileHeader({ profile }: { profile: Profile }) {
   if (profile.farcaster_url) links.push({ label: 'Farcaster', url: profile.farcaster_url });
   if (profile.bluesky_url) links.push({ label: 'Bluesky', url: profile.bluesky_url });
   if (profile.lens_url) links.push({ label: 'Lens', url: profile.lens_url });
+  if (profile.reddit_url) links.push({ label: 'Reddit', url: profile.reddit_url });
+  if (profile.paragraph_url) links.push({ label: 'Paragraph', url: profile.paragraph_url });
 
   return (
     <div className="flex flex-col sm:flex-row gap-6 items-start">

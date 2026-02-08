@@ -25,7 +25,7 @@ export async function getProjects(): Promise<Project[]> {
       .select('*')
       .order('sort_order', { ascending: true });
     if (error) throw error;
-    return data ?? fallbackProjects;
+    return data?.length ? data : fallbackProjects;
   } catch {
     return fallbackProjects;
   }
@@ -40,7 +40,7 @@ export async function getContributions(): Promise<Contribution[]> {
       .select('*')
       .order('sort_order', { ascending: true });
     if (error) throw error;
-    return data ?? fallbackContributions;
+    return data?.length ? data : fallbackContributions;
   } catch {
     return fallbackContributions;
   }

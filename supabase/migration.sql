@@ -83,7 +83,7 @@ VALUES (
   'https://hey.xyz/u/nullopcode'
 );
 
-INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, url, sort_order) VALUES
+INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, sort_order) VALUES
 (
   'SPL Token Staking',
   'spl-token-staking',
@@ -93,7 +93,6 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'active',
   'Cbhx5F1fVJG83xkqse88rxatrj73UW9Lz9G7awBrW8WZ',
   'solana',
-  NULL,
   0
 ),
 (
@@ -105,36 +104,5 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'active',
   '3hDJRcAJf5AHrRgkXhUUCcTYQVMkCubh9M6kTrsBZv55',
   'solana',
-  NULL,
   1
-),
-(
-  'nullopcode-worker',
-  'nullopcode-worker',
-  'Cloudflare Worker for cross-platform social posting. Farcaster, Bluesky, Lens v3 in parallel. GitHub push via Git Trees API.',
-  ARRAY['TypeScript', 'Cloudflare Workers', 'Viem', 'AT Protocol'],
-  'worker',
-  'shipped',
-  NULL,
-  NULL,
-  'https://nullopcode-worker.nullopcode.workers.dev',
-  2
 );
-
-INSERT INTO contributions (repo_name, repo_url, description, contribution_type, merged, contributed_at, sort_order) VALUES
-(
-  'solana-labs/solana',
-  'https://github.com/solana-labs/solana',
-  'Validator performance monitoring improvements',
-  'pr',
-  true,
-  '2024-11-15',
-  0
-);
-
--- ============================================================
--- FIX: rename if old seed was already run
--- ============================================================
-UPDATE projects SET name = 'SPL Token Staking', slug = 'spl-token-staking',
-  description = 'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (SPL + WSOL), on-chain distribution.'
-WHERE slug = 'clawg-staking';

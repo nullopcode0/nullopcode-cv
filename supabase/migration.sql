@@ -76,7 +76,7 @@ VALUES (
   'Building on-chain programs, DeFi infrastructure, and open-source tooling. Focused on Solana — staking systems, liquidity protocols, and cross-platform automation.',
   'https://nullopcode.cv',
   'CGiuetrCxiaibJuxxCvrRjMyEjgmVEngxmvBXJtrmB5y',
-  'https://github.com/nullopcode',
+  'https://github.com/nullopcode0',
   'https://x.com/nullopcode',
   'https://warpcast.com/nullopcode',
   'https://bsky.app/profile/nullopcode.bsky.social',

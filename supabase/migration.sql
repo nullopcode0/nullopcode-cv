@@ -83,18 +83,7 @@ VALUES (
   'https://hey.xyz/u/nullopcode'
 );
 
-INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, sort_order) VALUES
-(
-  'CLAWG Staking',
-  'clawg-staking',
-  'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (CLAWG + WSOL), on-chain distribution.',
-  ARRAY['Rust', 'Anchor', 'Solana', 'TypeScript'],
-  'solana-program',
-  'active',
-  'Cbhx5F1fVJG83xkqse88rxatrj73UW9Lz9G7awBrW8WZ',
-  'solana',
-  0
-),
+INSERT INTO projects (name, slug, description, tech_stack, category, status, program_id, chain, url, sort_order) VALUES
 (
   'Mercenary Liquidity',
   'mercenary-liquidity',
@@ -104,7 +93,8 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'active',
   '3hDJRcAJf5AHrRgkXhUUCcTYQVMkCubh9M6kTrsBZv55',
   'solana',
-  1
+  NULL,
+  0
 ),
 (
   'CLAWG Fee Splitter',
@@ -115,7 +105,8 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'shipped',
   '5QMXwAqPLVMzMdDAyT9QXJV2GZwxFDcvbz8u8dAe4sFT',
   'solana',
-  2
+  NULL,
+  1
 ),
 (
   'nullopcode-worker',
@@ -126,22 +117,9 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
   'shipped',
   NULL,
   NULL,
-  3
-),
-(
-  'fixr.nexus',
-  'fixr-nexus',
-  'Landing page and Token Hub with cross-chain staking UI. Base (EVM) and Solana staking in one interface.',
-  ARRAY['Next.js', 'TypeScript', 'Wagmi', 'Solana Web3.js', 'Supabase'],
-  'frontend',
-  'active',
-  NULL,
-  'multi',
-  4
+  'https://nullopcode-worker.nullopcode.workers.dev',
+  2
 );
-
-UPDATE projects SET url = 'https://nullopcode-worker.nullopcode.workers.dev' WHERE slug = 'nullopcode-worker';
-UPDATE projects SET url = 'https://fixr.nexus' WHERE slug = 'fixr-nexus';
 
 INSERT INTO contributions (repo_name, repo_url, description, contribution_type, merged, contributed_at, sort_order) VALUES
 (

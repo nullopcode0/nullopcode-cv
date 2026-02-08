@@ -87,7 +87,7 @@ INSERT INTO projects (name, slug, description, tech_stack, category, status, pro
 (
   'SPL Token Staking',
   'spl-token-staking',
-  'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (CLAWG + WSOL), on-chain distribution.',
+  'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (SPL + WSOL), on-chain distribution.',
   ARRAY['Rust', 'Anchor', 'Solana', 'TypeScript'],
   'solana-program',
   'active',
@@ -131,3 +131,10 @@ INSERT INTO contributions (repo_name, repo_url, description, contribution_type, 
   '2024-11-15',
   0
 );
+
+-- ============================================================
+-- FIX: rename if old seed was already run
+-- ============================================================
+UPDATE projects SET name = 'SPL Token Staking', slug = 'spl-token-staking',
+  description = 'Multi-tier token staking with time-weighted multipliers. 7 lock tiers (1d–365d), dual reward tokens (SPL + WSOL), on-chain distribution.'
+WHERE slug = 'clawg-staking';

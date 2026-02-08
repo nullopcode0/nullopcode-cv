@@ -37,6 +37,10 @@ export default async function Home() {
           <TerminalPrompt command="" showCursor />
         </TerminalWindow>
       </div>
+
+      <footer className="mt-8 pb-4 text-center text-xs text-terminal-dim">
+        nullopcode.cv // solana mainnet // 2026
+      </footer>
     </main>
   );
 }

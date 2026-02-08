@@ -28,7 +28,16 @@ export function ProfileHeader({ profile }: { profile: Profile }) {
         priority
       />
       <div className="flex-1 min-w-0">
-        <h1 className="text-2xl font-bold text-terminal-amber-bright">nullopcode.sol</h1>
+        <h1 className="text-2xl font-bold">
+          <a
+            href="https://www.sns.id/account/GzUzzfuv9fWd4sstFHf9BP3KQFTbh4RW3YcpbRAzZ79a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-terminal-amber-bright hover:text-terminal-amber hover:underline"
+          >
+            nullopcode.sol
+          </a>
+        </h1>
         <p className="text-terminal-dim text-sm">@{profile.handle}</p>
         <p className="text-terminal-amber mt-1">{profile.title}</p>
         <p className="text-terminal-text mt-3 leading-relaxed max-w-xl">{profile.bio}</p>
